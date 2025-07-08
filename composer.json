@@ -1,0 +1,11 @@
+{
+    "name": "startup-hurben/hydrator",
+    "description": "Hydrate this!",
+    "version": "0.1.0",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Hydrator\\": "src/"
+        }
+    }
+}
