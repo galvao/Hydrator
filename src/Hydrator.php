@@ -15,12 +15,10 @@ trait Hydrator
         foreach ($data as $name => $value) {
             $setter = 'set' . ucfirst($name);
 
-            if (method_exists($this, $setter)) {
-                try {
-                    ($this)->$setter($value);
-                } catch (Exception $e) {
-                    throw $e;
-                }
+            try {
+                ($this)->$setter($value);
+            } catch (Exception $e) {
+                throw $e;
             }
         }
     }
